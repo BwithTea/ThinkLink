@@ -24,3 +24,13 @@
 .secondary:hover {
     background-color: #cbd6dd;
 }
+
+.final {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 150px;
+}

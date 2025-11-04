@@ -2,8 +2,8 @@
 
 .field {
     display: flex;
-    gap: 0.5rem;
-    justify-content: center;
     flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
     margin-bottom: 1rem;
 }

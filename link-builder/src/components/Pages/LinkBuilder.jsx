@@ -2,6 +2,7 @@ import LinkGen from '../organisms/LinkGen.jsx';
 import Card from '../molecules/card.jsx';
 import Button from '../atoms/button.jsx';
 import Input from '../atoms/input.jsx';
+import FormField from '../molecules/FormField.jsx';
 
 import { useState } from 'react'
 
@@ -17,7 +18,8 @@ export default function LinkBuilder() {
             <h1 className="app-title">LinkedIn Link Builder</h1>
             <Card>
                 <LinkGen jobTitle={jobTitle} setJob={setJob} time={time} setTime={setTime} location={location} setLocation={setLocation} />
-                <Button type="button" variant="final"  onClick={() => {
+                
+                <Button type="button" variant="final" onClick={() => {
                     if (disabled) {
                         alert('Please pick a job title and time range before generating the link.');
                     } else {
@@ -28,7 +30,13 @@ export default function LinkBuilder() {
                     
                 }}> Generate Link </Button>
                 {/* Wrap this input in a form field so I can have a copy button */}
-                <Input id="generated-link" type="text" value={generatedLink} readOnly />
+                <FormField>
+                    <Input id="generated-link" type="text" value={generatedLink} readOnly />
+                    <Button type="button" variant="copy" disabled={!generatedLink} onClick={() => {
+                        navigator.clipboard.writeText(generatedLink);
+                        alert('Link copied to clipboard!');
+                    }}>Copy</Button>
+                </FormField>
             </Card>
         </div>
     )

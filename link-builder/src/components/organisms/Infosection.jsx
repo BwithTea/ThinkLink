@@ -50,7 +50,7 @@ export default function InfoSection() {
 
       <h1>Why Use This?</h1>
       <p style={{ maxWidth: "1000px", textAlign: "center", lineHeight: "1.6", fontSize: "2rem" }}>
-        LinkedIn limits time filters to “Past 24 Hours.” This tool gives you
+        LinkedIn limits time filters to “Past 24 Hours.” and doesn't give you much control over this. This tool gives you
         precise control, down to the hour, helping you apply before listings
         get flooded with applicants.
       </p>
